@@ -1,4 +1,6 @@
 import './assets/main.css'
+import './assets/prism.js'
+import './assets/prism.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 

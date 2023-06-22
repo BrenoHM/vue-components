@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue"
+import { onMounted, ref } from "vue"
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb.vue"
 import BreadcrumbItem from "@/components/Breadcrumb/BreadcrumbItem.vue"
 
@@ -40,27 +40,31 @@ const items3 = ref([
         active: true
     }
 ])
+
+onMounted(() => {
+    Prism.highlightAll();
+})
+
 </script>
 <template>
     <h2>Componente Breadcrumb</h2>
 
-    <div class="card">
+    <div class="card mb-4">
 
         <div class="card-header">
             <Breadcrumb :items="items1" />
         </div>
 
-    
     <div class="card-body">
-    <pre class="bg-body-secondary">
-    <code>
+    <pre>
+    <code class="language-javascript line-numbers" data-prismjs-copy="Copiar">
     const items1 = ref([
         {
             text: 'Home',
             active: true
         }
     ])
-
+    
     &lt;Breadcrumb :items="items1" /&gt;
     </code>
     </pre>
@@ -68,7 +72,32 @@ const items3 = ref([
 
     </div>
 
-    <Breadcrumb :items="items2" />
+    <div class="card mb-4">
+        <div class="card-header">
+            <Breadcrumb :items="items2" />
+        </div>
+    <div class="card-body">
+    <pre>
+    <code class="language-javascript line-numbers" data-prismjs-copy="Copiar">
+    const items2 = ref([
+        {
+            text: 'Home',
+            href: '#',
+            target: '_blank'
+        },
+        {
+            text: 'Library',
+            active: true
+        }
+    ])
+
+    &lt;Breadcrumb :items=&quot;items2&quot; /&gt;
+    </code>
+    </pre>
+    </div>
+    </div>
+
+
     <Breadcrumb :items="items3" />
 
     <Breadcrumb>
