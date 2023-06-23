@@ -7,9 +7,10 @@ import TheWelcome from './components/TheWelcome.vue'
   <div class="container">
     <div class="row">
       <div class="col-3">
-        <h1>Components</h1>
+        <h3>Componentes</h3>
         
         <p><router-link to="/">Home</router-link></p>
+        <p><router-link to="/accordion">Accordion</router-link></p>
         <p><router-link to="/alert">Alerts</router-link></p>
         <p><router-link to="/badge">Badge</router-link></p>
         <p><router-link to="/breadcrumb">Breadcrumb</router-link></p>

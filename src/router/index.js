@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "@/Home.vue"
+import Home from "@/Home.vue";
+import Accordion from "@/pages/Accordion.vue";
 import Alert from "@/pages/Alert.vue";
 import Badge from "@/pages/Badge.vue";
 import Breadcrumb from "@/pages/Breadcrumb.vue";
@@ -9,6 +10,11 @@ const routes = [
       path: "/",
       name: "Home",
       component: Home,
+    },
+    {
+      path: "/accordion",
+      name: "Accordion",
+      component: Accordion,
     },
     {
       path: "/alert",
