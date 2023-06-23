@@ -6,7 +6,9 @@ import Alert from './components/Alert.vue'
 
 <template>
 
-<h2>Projeto destinado a criaçao de components vuejs3</h2>
+<div class="d-flex justify-content-center align-items-center">
+<h2>Projeto destinado a criaçao de components Vuejs3 e Boostrap 5</h2>
+</div>
   
 </template>
 

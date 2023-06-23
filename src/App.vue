@@ -11,6 +11,7 @@ import TheWelcome from './components/TheWelcome.vue'
         
         <p><router-link to="/">Home</router-link></p>
         <p><router-link to="/alert">Alerts</router-link></p>
+        <p><router-link to="/badge">Badge</router-link></p>
         <p><router-link to="/breadcrumb">Breadcrumb</router-link></p>
       </div>
 

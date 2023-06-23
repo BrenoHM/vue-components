@@ -47,7 +47,8 @@ onMounted(() => {
 
 </script>
 <template>
-    <h2>Componente Breadcrumb</h2>
+    <h3>Breadcrumb</h3>
+    <hr>
 
     <div class="card mb-4">
 
@@ -97,12 +98,62 @@ onMounted(() => {
     </div>
     </div>
 
+    <div class="card mb-4">
+        <div class="card-header">
+            <Breadcrumb :items="items3" />
+        </div>
+    <div class="card-body">
+    <pre>
+    <code class="language-javascript line-numbers" data-prismjs-copy="Copiar">
+    const items3 = ref([
+        {
+            text: 'Admin',
+            href: '#'
+        },
+        {
+            text: 'Alerts',
+            to: { name: 'alert' }
+        },
+        {
+            text: 'Manage',
+            href: '#'
+        },
+        {
+            text: 'Library',
+            active: true
+        }
+    ])
 
-    <Breadcrumb :items="items3" />
+    &lt;Breadcrumb :items=&quot;items3&quot; /&gt;
+    </code>
+    </pre>
+    </div>
+    </div>
 
-    <Breadcrumb>
+    <div class="card mb-4">
+        <div class="card-header">
+            <Breadcrumb>
+                <BreadcrumbItem href="https://www.google.com" target="_blank">Foo</BreadcrumbItem>
+                <BreadcrumbItem :to="{name: 'alert'}" target="_blank">Example using router link</BreadcrumbItem>
+                <BreadcrumbItem active>Bar</BreadcrumbItem>
+            </Breadcrumb>
+        </div>
+    <div class="card-body">
+    <pre>
+    <code class="language-html line-numbers" data-prismjs-copy="Copiar">
+    &lt;Breadcrumb&gt;
+        &lt;BreadcrumbItem href=&quot;https://www.google.com&quot; target=&quot;_blank&quot;&gt;Foo&lt;/BreadcrumbItem&gt;
+        &lt;BreadcrumbItem :to=&quot;{name: 'alert'}&quot; target=&quot;_blank&quot;&gt;Example using router link&lt;/BreadcrumbItem&gt;
+        &lt;BreadcrumbItem active&gt;Bar&lt;/BreadcrumbItem&gt;
+    &lt;/Breadcrumb&gt;
+    </code>
+    </pre>
+    </div>
+    </div>
+
+    <!-- <Breadcrumb>
         <BreadcrumbItem href="https://www.google.com" target="_blank">Foo</BreadcrumbItem>
         <BreadcrumbItem :to="{name: 'alert'}" target="_blank">Example using router link</BreadcrumbItem>
         <BreadcrumbItem active>Bar</BreadcrumbItem>
-    </Breadcrumb>
+    </Breadcrumb> -->
 </template>
